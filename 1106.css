@@ -1,0 +1,556 @@
+ .logo1 img{   
+    height: 35px;
+     margin-left:130px;
+
+
+
+
+
+}
+.hero{ 
+  background-image: url("bag2.png"); 
+  background-size: 600px; 
+  background-repeat:no-repeat ;
+  background-position: right ;
+  height: 600px;                      
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  color: #1d1d1d;
+
+}
+
+ .body{
+  margin: 0px;
+ }
+ 
+
+   
+  
+.navbar {
+  display: flex;
+  align-items: center;          /* 垂直置中 */
+  justify-content: space-between; /* 左中右分布 */
+  padding: 10px 40px;           /* 左右間距 */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  background-color: white;
+  position: fixed;
+  width: 100%;
+}
+
+
+
+ .nav-links :hover {
+  color: #d0c9c6;
+}
+.nav-link a {
+ color: #747474;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: -10px;
+}
+
+   .nav-link{ 
+    display: flex;
+    align-items: center; 
+    justify-content: end;
+    padding: 0 15px;
+    gap:30px;
+    margin-top: 20px;
+    margin-right: 40px;
+   
+    
+ } 
+
+ 
+.btn-order{
+    background-color: #da3743;
+    display: flex; 
+    border: 65px;
+    justify-content: end;
+    border-radius: 90px;
+    /* padding:  10px; */
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 50px;
+    padding: 10px 50px ;
+    background-image: url("minlogo.png");
+    background-repeat: no-repeat;
+    background-position: left,center;
+    
+     
+    
+    }
+    .btn-order:hover {
+  background-color: #e84118;
+}
+.container h1 {
+     font-size: 50px;
+      margin-top: 150px;
+}
+
+.container h2{
+  margin-bottom: 40px;
+}
+
+
+.container span1 {
+    color: #e84118;
+}
+
+ 
+
+
+.title  {
+     margin-bottom: 50px;
+}
+
+
+
+
+
+.btn{
+  background-color: #064c8c;
+  border-radius: 10%;
+  padding: 12px 20px;
+  margin-top: 70px;
+  font-size: 15px;
+  color: #f0f0f0;
+  font-weight: bold;
+}
+
+.text{
+display:flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+font-size: 17.3px;
+margin-top: 120px;
+
+}
+
+.strong1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+ 
+}
+
+
+.text2{
+  color: #EC6300;
+  font-size: 26px;
+} 
+.text2-1{
+  font-size: 32px;
+  margin-top: 50px;
+
+}
+
+.icon{ 
+  width: 600px; 
+  height: 600px; 
+  vertical-align: middle;  
+  margin-right: 8px;
+  margin: 0px 18px;
+  margin-top: 100px;
+}
+
+.booking__content{
+  margin-top: 40px;
+  margin-left: 0px;
+}
+
+.feature__title{
+  margin-left: 1px;
+}
+
+
+
+
+.span1{
+  color: #064c8c;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 7px; /* 往右移 10px，可自行調整距離 */
+  display: inline-block; /* 讓 margin 生效 */
+
+}
+ul.feature{
+  margin:40px
+}
+
+
+.feature__title{
+  margin-bottom: 1px;
+}
+
+
+.feature__desc{
+  margin-top: 0px;
+}
+
+
+.container2{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px;
+
+
+}
+  
+
+
+.iconimg {
+  height: 40px;
+  width: 40px;
+}
+
+.iconimg {
+  width: 40px;              /* 控制圖片大小 */
+  height: 40px;
+  vertical-align: middle;   /* 與文字對齊 */
+  margin-right: 8px;/* 與文字留點距離 */
+  transform: translateY(-2px); /* 微調上下位置 */
+}
+
+
+.feature__desc {
+  margin-left: 53px;
+}
+
+.feature{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.container3{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
+.feature__desc{
+   width: 400px;
+  word-wrap: break-word;
+  
+}
+
+.container4{
+  display: flex;
+  justify-content:space-around ;
+  width:auto;
+}
+
+.text3{
+  font-size: 26px;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.brand-wrap {
+  
+display: flex;
+ flex-direction: column;   
+}
+
+.tabs{
+  margin-top: 120px;
+ 
+}
+
+.tab.is-active { color: #545454; }
+
+
+
+
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid #ffffff;
+  justify-content: center;
+}
+
+
+
+
+
+.tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 3px;
+  background: rgb(255, 174, 0);
+}
+
+/*底線寬度*/
+.tab:focus::after {   
+  width: 100%;
+}
+
+
+.tab {
+  position: relative;
+  background: none;
+  border: 0;
+  padding: 8px 4px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #444;
+  white-space: nowrap;
+  gap: 40px;
+}
+
+
+
+.logo img {
+  
+  object-fit: contain;
+  filter: grayscale(0);        /* 需要灰階可設為 100% */
+  opacity: .9;
+  transition: transform .2s ease, opacity .2s ease, filter .2s ease;
+   max-width: 200px;   /* 控制寬度即可 */
+  height: auto;       /* 高度自動維持比例 */
+  
+
+}
+.logo:hover img {
+  transform: translateY(-2px) scale(1.03);
+  opacity: 1;
+  filter: none;
+
+   
+}
+
+.container6{
+  height: 100px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  gap:50px
+}
+
+.text4{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+.text4 p{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.container6 p {
+   text-align: center;
+}
+
+.hi{
+  color: #064c8c;
+  font-size: 26px;
+}
+.no{
+  color: #FF0000;
+}
+.text4 a{
+  color: #000080;
+}
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+ 
+  gap: 12px;             /* 每個 input 間距 */
+}
+
+
+
+.section input,
+.section select {
+  width: 420px;            /* ✅ 統一寬度 */
+  height: 42px;            /* ✅ 統一高度 */
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;  /* ✅ 關鍵：padding + border 都包含在 width 內 */
+
+}
+
+.btn1{
+  background-color: #EC6337;
+ color: white;
+ padding: 14px 45px;
+ border-radius: 30px   ;
+ font-size: 15px;
+ font-weight: bold;
+
+}
+
+.wrp{
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.text5{
+  font-size: 32PX;
+}
+.ebtn{
+  background-color: #064c8c;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 0px,5px,5px,0px;
+  font-size: 20px;
+  color: #f0f0f0;
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+.contact-section{
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+
+}
+.divider{
+   width: 0.3px;
+   height: 140px;
+   background-color: #c4c3c3;
+   margin: 0,40px;
+}
+
+.btn2{
+  background-color: #EC6337;
+ color: white;
+ padding: 14px 35px;
+ border-radius: 20px   ;
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.footer{
+  display: flex;
+}
+
+footer.footer{
+ 
+  width: 100%;
+  margin: 0;
+  padding: 100px;
+  background-color: #252932;
+  color: #d0c9c6;
+  display: flex;
+}
+.container7{
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+.img-logo{
+  width: 90px;
+}
+
+
+.fourcolumns {
+  text-align: left;   /* 整塊靠左 */
+  width: fit-content; /* 讓內容寬度只跟文字一樣，不會撐滿整行 */
+       /* 或你想要的距離 */
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.fourcolumns p{
+ display: flex;
+ text-align: left; 
+ 
+
+
+}
+
+.fourcolumns a{
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+}
+.fourcolumns h3 {
+  font-size: 13px;
+}
+
+.fourcolumns li{
+list-style: none;
+border-bottom: 1px solid rgba(255,255,255,0.15);
+padding: 10px 10px 10px 0px;
+}
+
+.tell{
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+* {  /* 只是把「多出來的空隙」全部清掉，看起來就像頁尾被撐滿了。*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.fourcolumns2{
+  margin-top: 40px;
+}
+.ig{
+  display: flex;
+  flex-direction: column;
+  gap:30px
+}
+
+.copyright {
+  
+  background-color: #191c23;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  margin: 0;
+  padding: 10px 150px;
+}
+.smaller{
+  color: #9EA6B7;
+ 
+}
+.smaller a{
+  color:#9EA6B7;
+}
+
+.smaller a:hover {
+  
+  color: #fa2323; /* 確保滑鼠懸停時的顏色也相同 */
+}
+
+
+
+.copyright svg {
+  width: 28px;
+  height: 28px;
+ 
+    fill: #9EA6B7;
+}
+
+
+  
+.footer p {
+  margin-bottom: 25px;         /* ✅ 段落間距 */
+}

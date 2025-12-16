@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>F2E02 表單練習</title>
+<style>
+  :root{
+    --bg:#f3ecff;              /* 淡紫色頁面底 */
+    --card:#ffffff;
+    --primary:#673ab7;         /* 主紫 */
+    --primary-weak:#ede7f6;
+    --text:#202124;
+    --muted:#5f6368;
+    --border:#dadce0;
+    --focus:#1a73e8;           /* 藍色聚焦線（仿 Google） */
+    --radius:10px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: "Noto Sans TC", "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    color:var(--text);
+    background:var(--bg);
+  }
+  .wrap{
+    max-width:760px;
+    margin:48px auto 120px;
+    padding:0 16px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    box-shadow:0 1px 2px rgba(0,0,0,.06);
+    overflow:hidden;
+  }
+  .header{
+    padding:28px 32px 16px;
+    background:linear-gradient(180deg, var(--primary-weak) 0%, #fff 54%);
+    border-bottom:1px solid var(--border);
+  }
+  .title{
+    font-size:28px;
+    font-weight:700;
+    letter-spacing:.3px;
+    color:var(--text);
+    margin:0 0 8px 0;
+  }
+  .subtitle{
+    font-size:13px;
+    color:var(--muted);
+  }
+  .reqnote{
+    margin:14px 32px;
+    font-size:12px;
+    color:#d93025; /* Google 的錯誤紅 */
+  }
+  form{padding:0 0 8px}
+  .section{
+    margin:16px 32px;
+    padding:16px 0 8px;
+    border-bottom:1px solid var(--border);
+  }
+  .section:last-of-type{border-bottom:0}
+  .label{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:16px;
+    margin-bottom:10px;
+  }
+  .star{color:#d93025}
+  .helper{font-size:12px;color:var(--muted);margin-top:6px}
+  /* text inputs */
+  .input{
+    width:100%;
+    padding:14px 12px;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    font-size:16px;
+    outline:none;
+    background:#fff;
+  }
+  .input:focus{border-color:var(--focus); box-shadow:0 0 0 3px rgba(26,115,232,.15)}
+  textarea.input{min-height:92px; resize:vertical}
+  /* choice groups */
+  .choices{display:grid; gap:10px; margin-top:6px}
+  .choices.inline{grid-auto-flow:row; grid-template-columns:repeat(3, minmax(80px, 140px))}
+  .choice{
+    display:flex; align-items:center; gap:10px; font-size:15px;
+  }
+  input[type="radio"], input[type="checkbox"]{
+    width:18px; height:18px; accent-color:var(--primary);
+    transform:translateY(1px);
+  }
+  /* select */
+  select.input{appearance:none; background:
+      linear-gradient(45deg, transparent 50%, var(--muted) 50%) right 16px top 55%/8px 8px no-repeat,
+      linear-gradient(135deg, var(--muted) 50%, transparent 50%) right 12px top 55%/8px 8px no-repeat,
+      #fff;
+    padding-right:40px;
+  }
+  /* actions */
+  .actions{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:24px 32px 28px;
+  }
+  .left-actions{display:flex; gap:12px}
+  .btn{
+    appearance:none; border:0; cursor:pointer;
+    font-size:14px; padding:10px 24px; border-radius:24px;
+    transition:filter .15s ease, box-shadow .15s ease, transform .02s ease-in;
+  }
+  .btn-primary{
+    background:var(--primary); color:#fff;
+  }
+  .btn-primary:active{transform:translateY(1px)}
+  .btn-text{
+    background:transparent; color:var(--primary); font-weight:600;
+  }
+  .btn:focus{outline:2px solid rgba(26,115,232,.35); outline-offset:2px}
+  /* footer tiny links (裝飾用，非必須) */
+  .tiny{
+    text-align:center; color:var(--muted); font-size:12px; margin-top:12px;
+  }
+  /* small screens */
+  @media (max-width:540px){
+    .choices.inline{grid-template-columns:repeat(2, minmax(80px, 1fr))}
+    .actions{flex-direction:column; gap:12px; align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <h1 class="title">F2E02 表單練習</h1>
+        <div class="subtitle">僅供練習用之表單版面</div>
+      </div>
+
+      <div class="reqnote">* 表示必填問題</div>
+
+      <form id="form">
+        <!-- 姓名（必填） -->
+        <div class="section">
+          <label class="label" for="name">
+            姓名 <span class="star">*</span>
+          </label>
+          <input id="name" name="name" type="text" class="input" placeholder="您的答案" required />
+        </div>
+
+        <!-- 信箱（必填） -->
+        <div class="section">
+          <label class="label" for="email">
+            信箱 <span class="star">*</span>
+          </label>
+          <input id="email" name="email" type="email" class="input" placeholder="您的答案" required />
+        </div>
+
+        <!-- 生日（日期） -->
+        <div class="section">
+          <label class="label" for="birthday">生日</label>
+          <input id="birthday" name="birthday" type="date" class="input" />
+          <div class="helper">年 / 月 / 日</div>
+        </div>
+
+        <!-- 想跟老師說悄悄話（長文字） -->
+        <div class="section">
+          <label class="label" for="msg">想跟老師說悄悄話</label>
+          <textarea id="msg" name="message" class="input" placeholder="您的答案"></textarea>
+        </div>
+
+        <!-- 喜歡的顏色（單選） -->
+        <div class="section">
+          <div class="label">喜歡的顏色</div>
+          <div class="choices inline" role="radiogroup" aria-label="喜歡的顏色">
+            <label class="choice"><input type="radio" name="color" value="黃">黃</label>
+            <label class="choice"><input type="radio" name="color" value="綠">綠</label>
+            <label class="choice"><input type="radio" name="color" value="紅">紅</label>
+          </div>
+        </div>
+
+        <!-- 喜歡吃的飲食類型（複選） -->
+        <div class="section">
+          <div class="label">喜歡吃的飲食類型</div>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="food" value="中式" checked>中式</label>
+            <label class="choice"><input type="checkbox" name="food" value="義式" checked>義式</label>
+            <label class="choice"><input type="checkbox" name="food" value="日式">日式</label>
+            <label class="choice"><input type="checkbox" name="food" value="韓式" checked>韓式</label>
+            <label class="choice"><input type="checkbox" name="food" value="美式">美式</label>
+            <label class="choice"><input type="checkbox" name="food" value="泰式">泰式</label>
+          </div>
+        </div>
+
+        <!-- 最想去的國家（select + optgroup） -->
+        <div class="section">
+          <label class="label" for="country">最想去的國家</label>
+          <select id="country" name="country" class="input">
+            <optgroup label="亞洲">
+              <option value="日本" selected>日本</option>
+              <option value="韓國">韓國</option>
+              <option value="泰國">泰國</option>
+              <option value="台灣">台灣</option>
+            </optgroup>
+            <optgroup label="歐洲">
+              <option value="義大利">義大利</option>
+              <option value="法國">法國</option>
+              <option value="西班牙">西班牙</option>
+              <option value="德國">德國</option>
+            </optgroup>
+            <optgroup label="美洲">
+              <option value="美國">美國</option>
+              <option value="加拿大">加拿大</option>
+              <option value="墨西哥">墨西哥</option>
+            </optgroup>
+            <optgroup label="大洋洲">
+              <option value="澳洲">澳洲</option>
+              <option value="紐西蘭">紐西蘭</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- 動作 -->
+        <div class="actions">
+          <div class="left-actions">
+            <button type="submit" class="btn btn-primary">提交</button>
+          </div>
+          <button type="reset" class="btn btn-text">清除表單</button>
+        </div>
+      </form>
+
+      <div class="tiny">本頁僅為練習樣式，非 Google 表單官方頁面。</div>
+      <div class="tiny" style="margin-bottom:18px;">回饋：外觀與互動盡量還原，欄位、驗證與預設值皆可自行修改。</div>
+    </div>
+  </div>
+
+  <script>
+    // 可選：攔截送出改成在網址列顯示 ?key=value（方便你測）
+    document.getElementById('form').addEventListener('submit', function(e){
+      // 取消真的送出
+      e.preventDefault();
+      const data = new FormData(this);
+      const params = new URLSearchParams();
+      for (const [k, v] of data.entries()){
+        if (params.has(k)){                    // 讓 checkbox 能累積多值
+          params.append(k, v);
+        }else{
+          params.set(k, v);
+        }
+      }
+      // 導向到同頁並把參數帶在網址
+      const url = location.pathname + "?" + params.toString();
+      history.replaceState(null, "", url);
+      // 給個簡單提示
+      alert("已模擬提交（參數已加到網址列）");
+    });
+  </script>
+</body>
+</html>
